@@ -143,7 +143,7 @@ function MentionArea() {
   React.useEffect(() => {
     if (isSuggestor) {
       setFetchState({ loading: true, data: null, error: null });
-      fetch(`/search?q=${query}`)
+      fetch(`https://rmes-c.onrender.com/search?q=${query}`)
         .then((res) => res.json())
         .then((hits: SearchResult[]) => {
           setFetchState({
